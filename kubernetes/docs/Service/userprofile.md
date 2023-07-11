@@ -5,12 +5,12 @@
 ### Cluster에 userprofile Service를 생성하려면 아래의 명령어를 실행하세요.
 
 ```
-$ kubectl create -f https://minio.msaez.io/labs-msaez.io/yamlStorage/dating-app/jyjang%40uengine.org/Service/userprofile.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20230711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230711T005321Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=95b541eb66da079c3f4517b7c41e8fb88b5398ffd3104e9fb0b3367b31ff1bcd
+$ kubectl create -f https://minio.msaez.io/labs-msaez.io/yamlStorage/dating-app/jyjang%40uengine.org/Service/userprofile.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20230711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230711T005738Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=3ee7ba21dec587e509d52a9e276ef6218d4809f48ca8cee04676f6bca3cd0ab5
 ```
 - Yaml 파일에 명시된 스펙으로 userprofile Service를 생성합니다.  
 
 ```
-$ kubectl apply -f https://minio.msaez.io/labs-msaez.io/yamlStorage/dating-app/jyjang%40uengine.org/Service/userprofile.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20230711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230711T005321Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=95b541eb66da079c3f4517b7c41e8fb88b5398ffd3104e9fb0b3367b31ff1bcd
+$ kubectl apply -f https://minio.msaez.io/labs-msaez.io/yamlStorage/dating-app/jyjang%40uengine.org/Service/userprofile.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20230711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230711T005738Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=3ee7ba21dec587e509d52a9e276ef6218d4809f48ca8cee04676f6bca3cd0ab5
 ```
 - Create가 된 상태라면 userprofile Service의 수정이 이루어지고, Create가 된 상태가 아니라면 userprofile Service를 Create 해주는 명령어입니다.
 #

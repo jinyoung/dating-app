@@ -5,12 +5,12 @@
 ### Cluster에 paymentservice Deployment를 생성하려면 아래의 명령어를 실행하세요.
 
 ```
-$ kubectl create -f https://minio.msaez.io/labs-msaez.io/yamlStorage/dating-app/jyjang%40uengine.org/Deployment/paymentservice.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20230711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230711T005321Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=b00b1c05c211faa13611019d1310514956f5e52eb0d6a5288ba3083be1a8c0cf
+$ kubectl create -f https://minio.msaez.io/labs-msaez.io/yamlStorage/dating-app/jyjang%40uengine.org/Deployment/paymentservice.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20230711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230711T005738Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=6d48b7c39b8cccceb6f788b6c73967f37787fe9be6a5a3cf9f4dc0ed25878b94
 ```
 - Yaml 파일에 명시된 스펙으로 paymentservice Deployment를 생성합니다.
 
 ```
-$ kubectl apply -f https://minio.msaez.io/labs-msaez.io/yamlStorage/dating-app/jyjang%40uengine.org/Deployment/paymentservice.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20230711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230711T005321Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=b00b1c05c211faa13611019d1310514956f5e52eb0d6a5288ba3083be1a8c0cf
+$ kubectl apply -f https://minio.msaez.io/labs-msaez.io/yamlStorage/dating-app/jyjang%40uengine.org/Deployment/paymentservice.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20230711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230711T005738Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=6d48b7c39b8cccceb6f788b6c73967f37787fe9be6a5a3cf9f4dc0ed25878b94
 ```
 - Create가 된 상태라면 paymentservice Deployment의 수정이 이루어지고, Create가 된 상태가 아니라면 paymentservice Deployment를 Create 해주는 명령어입니다.  
 #

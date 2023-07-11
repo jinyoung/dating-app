@@ -5,12 +5,12 @@
 ### Cluster에 locationservice Service를 생성하려면 아래의 명령어를 실행하세요.
 
 ```
-$ kubectl create -f https://minio.msaez.io/labs-msaez.io/yamlStorage/dating-app/jyjang%40uengine.org/Service/locationservice.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20230711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230711T005321Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=5964f0b44074d5db4d3210dd48183ff7c8a1f835e86ccf0ed5100b3d3a3e6b21
+$ kubectl create -f https://minio.msaez.io/labs-msaez.io/yamlStorage/dating-app/jyjang%40uengine.org/Service/locationservice.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20230711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230711T005738Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=c8becbfffd3ed55f11a76aee53bfd2050323047452a6f14bd7f9ffd60af5b7ff
 ```
 - Yaml 파일에 명시된 스펙으로 locationservice Service를 생성합니다.  
 
 ```
-$ kubectl apply -f https://minio.msaez.io/labs-msaez.io/yamlStorage/dating-app/jyjang%40uengine.org/Service/locationservice.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20230711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230711T005321Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=5964f0b44074d5db4d3210dd48183ff7c8a1f835e86ccf0ed5100b3d3a3e6b21
+$ kubectl apply -f https://minio.msaez.io/labs-msaez.io/yamlStorage/dating-app/jyjang%40uengine.org/Service/locationservice.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20230711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230711T005738Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=c8becbfffd3ed55f11a76aee53bfd2050323047452a6f14bd7f9ffd60af5b7ff
 ```
 - Create가 된 상태라면 locationservice Service의 수정이 이루어지고, Create가 된 상태가 아니라면 locationservice Service를 Create 해주는 명령어입니다.
 #

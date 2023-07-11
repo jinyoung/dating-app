@@ -5,12 +5,12 @@
 ### Cluster에 chatfunctionality Deployment를 생성하려면 아래의 명령어를 실행하세요.
 
 ```
-$ kubectl create -f https://minio.msaez.io/labs-msaez.io/yamlStorage/dating-app/jyjang%40uengine.org/Deployment/chatfunctionality.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20230711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230711T005321Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=ded8dc6870296e15fe807333735497635ad057c26e6d652e0c3098a90545aa6d
+$ kubectl create -f https://minio.msaez.io/labs-msaez.io/yamlStorage/dating-app/jyjang%40uengine.org/Deployment/chatfunctionality.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20230711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230711T005738Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=0cefd510fe4961fdfd7fff6566e248af2429f88bd4cfe0d8e9725af69fe7bf6b
 ```
 - Yaml 파일에 명시된 스펙으로 chatfunctionality Deployment를 생성합니다.
 
 ```
-$ kubectl apply -f https://minio.msaez.io/labs-msaez.io/yamlStorage/dating-app/jyjang%40uengine.org/Deployment/chatfunctionality.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20230711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230711T005321Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=ded8dc6870296e15fe807333735497635ad057c26e6d652e0c3098a90545aa6d
+$ kubectl apply -f https://minio.msaez.io/labs-msaez.io/yamlStorage/dating-app/jyjang%40uengine.org/Deployment/chatfunctionality.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20230711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230711T005738Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=0cefd510fe4961fdfd7fff6566e248af2429f88bd4cfe0d8e9725af69fe7bf6b
 ```
 - Create가 된 상태라면 chatfunctionality Deployment의 수정이 이루어지고, Create가 된 상태가 아니라면 chatfunctionality Deployment를 Create 해주는 명령어입니다.  
 #
