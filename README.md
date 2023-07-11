@@ -1,7 +1,7 @@
 # 
 
 ## Model
-www.msaez.io/#/storming/5f715d03efef67a7adc3d0777d3b0ff6
+www.msaez.io/#/storming/dating-app
 
 ## Before Running Services
 ### Make sure there is a Kafka server running
@@ -20,8 +20,12 @@ cd /bin
 ## Run the backend micro-services
 See the README.md files inside the each microservices directory:
 
-- User Management
-- Matchmaking
+- userProfile
+- matchingRecommendation
+- chatFunctionality
+- locationService
+- paymentService
+- feedbackService
 
 
 ## Run API Gateway (Spring Gateway)
@@ -31,14 +35,29 @@ mvn spring-boot:run
 ```
 
 ## Test by API
-- User Management
+- userProfile
 ```
- http :8088/users userId="userId" name="name" age="age" gender="gender" sexualOrientation="sexualOrientation" interests="interests" 
+ http :8088/users name="name" age="age" status="status" interests="interests" 
 ```
-- Matchmaking
+- matchingRecommendation
 ```
- http :8088/interests interestName="interestName" 
- http :8088/matches matchId="matchId" matchName="matchName" matchAge="matchAge" matchGender="matchGender" matchSexualOrientation="matchSexualOrientation" location="location" interests="interests" 
+ http :8088/recommendations name="name" age="age" interests="interests" 
+```
+- chatFunctionality
+```
+ http :8088/chats displayName="displayName" members="members" 
+```
+- locationService
+```
+ http :8088/locations name="name" latitude="latitude" longitude="longitude" 
+```
+- paymentService
+```
+ http :8088/payments paymentId="paymentId" amount="amount" currency="currency" description="description" 
+```
+- feedbackService
+```
+ http :8088/feedbacks false="false" 
 ```
 
 

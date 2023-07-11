@@ -5,13 +5,23 @@ import Router from 'vue-router'
 Vue.use(Router);
 
 
-import UserManager from "./components/listers/UserCards"
-import UserDetail from "./components/listers/UserDetail"
+import UserProfileUserManager from "./components/listers/UserProfileUserCards"
+import UserProfileUserDetail from "./components/listers/UserProfileUserDetail"
 
-import InterestManager from "./components/listers/InterestCards"
-import InterestDetail from "./components/listers/InterestDetail"
-import MatchManager from "./components/listers/MatchCards"
-import MatchDetail from "./components/listers/MatchDetail"
+import MatchingRecommendationRecommendationManager from "./components/listers/MatchingRecommendationRecommendationCards"
+import MatchingRecommendationRecommendationDetail from "./components/listers/MatchingRecommendationRecommendationDetail"
+
+import ChatFunctionalityChatManager from "./components/listers/ChatFunctionalityChatCards"
+import ChatFunctionalityChatDetail from "./components/listers/ChatFunctionalityChatDetail"
+
+import LocationServiceLocationManager from "./components/listers/LocationServiceLocationCards"
+import LocationServiceLocationDetail from "./components/listers/LocationServiceLocationDetail"
+
+import PaymentServicePaymentManager from "./components/listers/PaymentServicePaymentCards"
+import PaymentServicePaymentDetail from "./components/listers/PaymentServicePaymentDetail"
+
+import FeedbackServiceFeedbackManager from "./components/listers/FeedbackServiceFeedbackCards"
+import FeedbackServiceFeedbackDetail from "./components/listers/FeedbackServiceFeedbackDetail"
 
 
 export default new Router({
@@ -19,35 +29,69 @@ export default new Router({
     base: process.env.BASE_URL,
     routes: [
             {
-                path: '/users',
-                name: 'UserManager',
-                component: UserManager
+                path: '/userProfiles/users',
+                name: 'UserProfileUserManager',
+                component: UserProfileUserManager
             },
             {
-                path: '/users/:id',
-                name: 'UserDetail',
-                component: UserDetail
+                path: '/userProfiles/users/:id',
+                name: 'UserProfileUserDetail',
+                component: UserProfileUserDetail
             },
 
             {
-                path: '/interests',
-                name: 'InterestManager',
-                component: InterestManager
+                path: '/matchingRecommendations/recommendations',
+                name: 'MatchingRecommendationRecommendationManager',
+                component: MatchingRecommendationRecommendationManager
             },
             {
-                path: '/interests/:id',
-                name: 'InterestDetail',
-                component: InterestDetail
+                path: '/matchingRecommendations/recommendations/:id',
+                name: 'MatchingRecommendationRecommendationDetail',
+                component: MatchingRecommendationRecommendationDetail
+            },
+
+            {
+                path: '/chatFunctionalities/chats',
+                name: 'ChatFunctionalityChatManager',
+                component: ChatFunctionalityChatManager
             },
             {
-                path: '/matches',
-                name: 'MatchManager',
-                component: MatchManager
+                path: '/chatFunctionalities/chats/:id',
+                name: 'ChatFunctionalityChatDetail',
+                component: ChatFunctionalityChatDetail
+            },
+
+            {
+                path: '/locationServices/locations',
+                name: 'LocationServiceLocationManager',
+                component: LocationServiceLocationManager
             },
             {
-                path: '/matches/:id',
-                name: 'MatchDetail',
-                component: MatchDetail
+                path: '/locationServices/locations/:id',
+                name: 'LocationServiceLocationDetail',
+                component: LocationServiceLocationDetail
+            },
+
+            {
+                path: '/paymentServices/payments',
+                name: 'PaymentServicePaymentManager',
+                component: PaymentServicePaymentManager
+            },
+            {
+                path: '/paymentServices/payments/:id',
+                name: 'PaymentServicePaymentDetail',
+                component: PaymentServicePaymentDetail
+            },
+
+            {
+                path: '/feedbackServices/feedbacks',
+                name: 'FeedbackServiceFeedbackManager',
+                component: FeedbackServiceFeedbackManager
+            },
+            {
+                path: '/feedbackServices/feedbacks/:id',
+                name: 'FeedbackServiceFeedbackDetail',
+                component: FeedbackServiceFeedbackDetail
             },
 
 

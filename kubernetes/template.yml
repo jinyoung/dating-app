@@ -3,22 +3,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: User Management
+  name: userProfile
   labels:
-    app: User Management
+    app: userProfile
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: User Management
+      app: userProfile
   template:
     metadata:
       labels:
-        app: User Management
+        app: userProfile
     spec:
       containers:
-        - name: User Management
-          image: username/User Management:latest
+        - name: userProfile
+          image: username/userProfile:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -43,22 +43,182 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Matchmaking
+  name: matchingRecommendation
   labels:
-    app: Matchmaking
+    app: matchingRecommendation
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: Matchmaking
+      app: matchingRecommendation
   template:
     metadata:
       labels:
-        app: Matchmaking
+        app: matchingRecommendation
     spec:
       containers:
-        - name: Matchmaking
-          image: username/Matchmaking:latest
+        - name: matchingRecommendation
+          image: username/matchingRecommendation:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chatFunctionality
+  labels:
+    app: chatFunctionality
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chatFunctionality
+  template:
+    metadata:
+      labels:
+        app: chatFunctionality
+    spec:
+      containers:
+        - name: chatFunctionality
+          image: username/chatFunctionality:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: locationService
+  labels:
+    app: locationService
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: locationService
+  template:
+    metadata:
+      labels:
+        app: locationService
+    spec:
+      containers:
+        - name: locationService
+          image: username/locationService:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: paymentService
+  labels:
+    app: paymentService
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: paymentService
+  template:
+    metadata:
+      labels:
+        app: paymentService
+    spec:
+      containers:
+        - name: paymentService
+          image: username/paymentService:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: feedbackService
+  labels:
+    app: feedbackService
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: feedbackService
+  template:
+    metadata:
+      labels:
+        app: feedbackService
+    spec:
+      containers:
+        - name: feedbackService
+          image: username/feedbackService:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -85,15 +245,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: User Management
+  name: userProfile
   labels:
-    app: User Management
+    app: userProfile
 spec:
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    app: User Management
+    app: userProfile
 
 
 ---
@@ -102,13 +262,81 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: Matchmaking
+  name: matchingRecommendation
   labels:
-    app: Matchmaking
+    app: matchingRecommendation
 spec:
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    app: Matchmaking
+    app: matchingRecommendation
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: chatFunctionality
+  labels:
+    app: chatFunctionality
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: chatFunctionality
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: locationService
+  labels:
+    app: locationService
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: locationService
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: paymentService
+  labels:
+    app: paymentService
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: paymentService
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: feedbackService
+  labels:
+    app: feedbackService
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: feedbackService
 
